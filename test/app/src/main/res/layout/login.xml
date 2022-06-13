@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/peakpx"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/frontlogo"
+        android:layout_width="137dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="548dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/login_username_field"
+        android:layout_width="199dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="450dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frontlogo" />
+
+    <EditText
+        android:id="@+id/login_password_field"
+        android:layout_width="199dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/loginCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_username_field" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCardView"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="276dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="10dp"
+        android:onClick="login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_field">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/buttonlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/register_redirect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="179dp"
+        android:background="@android:color/transparent"
+        android:text="Register"
+        android:onClick="redirect_Register"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginCardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
